@@ -1,0 +1,489 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Ursula Igor A01185213*/
+
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End CSS Reset */
+
+/* Set Main tag to display block */
+
+main {
+	display: block;	
+}
+
+/* End Set Main tag to display block */
+
+/* Box Sizing Reset */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* End Box Sizing Reset */
+
+/* Responsive Image Reset */
+
+img {
+	max-width: 100%;
+	height: auto;	
+}
+
+/* End Responsive Image Reset */
+
+/* Utility classes */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* End Utility classes */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Merriweather', serif;
+	font-weight: 700;
+	font-style: italic;
+	margin: 16px 0;	
+}
+
+h1 {
+	font-size: 24px;	
+}
+
+h2 {
+	font-size: 20px;	
+}
+
+header h1 {
+	margin: 0;
+	margin-right: auto;
+	font-size: 42px;
+	font-weight: 400;
+	margin-left: 10px;
+}
+
+header h1 a {
+	font-family: 'Pacifico', cursive;	
+	color: blue;
+	text-decoration: none;		
+}
+
+.col h2 {
+	margin: 0 0 20px;
+	text-align: center;	
+}
+
+p, li, a, b {
+	font-family: 'Merriweather', serif;
+	line-height: 1.5;
+}
+
+p {
+	margin: 14px 0;	
+}
+
+b {
+	font-weight: bold;	
+}
+
+html,
+body {
+	height: 100%;	
+}
+
+body {
+	background-size: cover;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+        background-color: blue;
+  	background-image: url(../images/bg.jpg);
+}
+
+.wrapper {
+	max-width: 960px;
+	padding: 20px;
+	margin: 0 auto;
+	background-color: #55ec1a;	
+}
+
+header {
+	padding: 12px 0px;
+	height: 140px;
+	display: flex;
+	background-color: #55ec1a;
+}
+
+.logo {
+	width: 140px;
+} 
+
+.logo img {
+	display: block;	
+}
+
+.hamburger-menu {
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: center; 
+  float: right;
+  display: none;
+}
+
+.hamburger-menu:focus,
+.hamburger-menu-content:focus {
+    outline: none;
+}
+    
+.hamburger-menu:focus .hamburger-menu-content {
+    outline: 5px solid #7683C9;
+}
+
+.hamburger-menu-content {
+	display: block;
+    height: 24px;
+}
+
+.bar,
+.bar:after,
+.bar:before {
+  width: 40px;
+  height: 4px;
+  border-radius: 10px; }
+
+.bar {
+  position: relative;
+  top: 5px;
+  transform: translateY(5px);
+  background: #111111;
+  transition: all 0ms 300ms;
+  border-radius: 10px;
+  display: block; 
+}
+
+.bar.animate {
+    background: rgba(17, 17, 17, 0); }
+
+.bar:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  background: #111111;
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.bar:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: #111111;
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.bar.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 1; }
+
+.bar.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1); }
+
+.hamburger-menu .bar.animate {
+  background: transparent !important; }
+
+.hamburger-menu .bar.animate:before, .hamburger-menu .bar.animate:after {
+  background: #111111; }
+
+
+nav {
+	height: 45px;
+	/*margin-bottom: 1em;*/
+}
+
+nav ul {
+	display: flex;
+}
+
+nav li {
+	flex: 1;
+}
+
+nav a {
+	display: block;
+	line-height: 60px;
+	color: rgb(238, 4, 4);
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.2rem;
+	background-color: white;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 25px;
+	font-weight: normal;
+	font-style: italic;
+	font-variant: small-caps;
+	text-transform: none;
+}
+
+nav a:focus,
+nav a:hover,
+nav a:active {
+    background-color: #86f05d;
+    color: white;
+    outline: none;
+}
+
+main {
+	margin-bottom: 30px;	
+}
+
+
+.banner img {
+	display: block;	
+}
+.banner img,
+.row img {
+	width: 100%;
+}
+
+main {
+	padding-top:20px;
+}
+main section h2 {
+	margin-top: 0;
+}
+
+section {
+	padding-top: 30px;
+	background-color:white;
+
+}
+.container {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+  }
+.profiles {
+	padding-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}
+
+.profile {
+	flex: 0 1 48%;
+	margin-bottom: 4%;
+	padding: 20px;
+	display: flex;
+}
+.img-services {
+	border-radius:50%;
+}
+
+
+.profile:last-child {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.profile h3 {
+	margin-top: 0;
+}
+
+.profile p {
+	margin-bottom: 0;
+}
+
+.profile img {
+	align-self: flex-start;
+	width: 70%;
+	margin-right: 5%;
+}
+
+/* hasta aqui lo de services*/
+.title-section{
+	color: red;
+	font-size: xx-large;
+	padding-left: 30px;
+}
+
+footer {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px 30px;
+	border-top: 1px dotted #ccc;	
+}
+
+
+  
+@media only screen and (max-width: 600px) {
+	.hamburger-menu {
+	  display: block;
+	}
+  
+	nav {
+	  height: 0;
+	  overflow: hidden;
+	  width: 100%;
+	}
+  
+	.show nav {
+	  height: 240px;
+  
+	 animation: flip 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+	  background: rgba(0, 0, 0, 0.233);
+	}
+	
+	.show nav ul {
+	  flex-direction: column;
+	}
+  
+	.show nav.activated {
+	  transition: height 0.3s ease;
+	}
+	.profiles {
+		display:block;
+	}
+	
+}
+
+@media only screen and (max-width: 450px) {
+
+	header {
+		height: 70px;
+	}
+
+	.logo {
+		width: 53px;
+	}
+
+	header h1 {
+		line-height: 46px;
+		font-size: 25px;
+	}
+	.profiles {
+		display:block;
+	}
+
+}
+
+@media only screen and (min-width: 1024px) {
+	body {
+	  background-image: url(../images/bg.jpg);
+	}
+  }
+  
+@media only screen and (max-width: 1024px) {
+   
+	   body {
+		background-image: none;
+	  }
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+	width: 100%; 
+	padding: 12px; 
+	border: 1px solid #ccc; 
+	border-radius: 4px; 
+	box-sizing: border-box;
+	margin-top: 6px; 
+	margin-bottom: 16px; 
+	resize: vertical 
+  }
+  
+  input[type=date], select, textarea {
+	width: 50%; 
+	font-size: medium;
+	padding: 12px; 
+	border: 1px solid #ccc; 
+	border-radius: 4px; 
+	box-sizing: border-box; 
+	margin-top: 6px; 
+	margin-bottom: 16px; 
+	resize: vertical ;
+  }
+  
+  input[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+	background-color: #45a049;
+  }
+  
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Child Care Hi-5 - Contact</title>
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Pacifico" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<div class="wrapper">
+<header>
+  <a class="logo" href="index.html"><img src="images/logoverde.svg" alt="Logo" /></a>	
+  <img src="images/tittle.png"   alt="Tittle header"> 
+  <button class="hamburger-menu">
+      <span class="hamburger-menu-content" tabindex="-1">
+	      <span class="sr-only">Menu</span>
+	      <span class="bar"></span>
+      </span><!-- end hamburger-menu-content -->
+  </button>
+</header>
+<nav id="main-navigation">
+		<ul>
+				<li class='menu-blue'><a href="#0">Registration</a></li>
+				<li class= "menu-red"><a href="services.html">Services</a></li>
+				<li class= "menu-purple"><a href="#0">Streaming</a></li>
+				<li class="menu-yellow"><a href="contact.html">Contact</a></li>	
+		</ul>
+</nav>
+
+<main>
+  <div class="banner">
+
+    <section>
+			<h1 class= "title-section">Contact</h1>
+				<img src="images/funny-kids-playing.jpg" alt="Child Care">
+			<!-- form-->
+			<div class="container">
+				<form name="mail" method="POST" action="php/send.php">
+			  
+				  <label for="fname">Full Name</label>
+				  <input type="text" id="fname" name="fullname" placeholder="Your name..">
+			  
+				  <label for="email">Your E-mail</label>
+				  <input type="text" id="email" name="email" placeholder="Your email..">
+				  
+				
+				  <label for="subject">Subject</label><br>
+				  <textarea id="subject" name="subject" placeholder="Write something.." 					style="height:200px"></textarea><br>
+        
+          <input name="submit" type="submit" value="Send" />
+				  			  
+				</form>
+			  </div>
+			  <!-- end form-->
+		</section> 
+ 
+</main>
+<footer>
+  <p>&copy; 2020 Ursula Igor</p>
+	<p>Child Care Hi-5</p>
+    <p>All content for use on this web page only</p>
+    <a  class="phone-footer" href="tel:+2363300555">Phone:236-3300555</a>
+</footer>
+</div><!-- end wrapper -->
+<script src="scripts/menu.js"></script>
+</body>
+</html>
